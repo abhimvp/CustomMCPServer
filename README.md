@@ -35,3 +35,30 @@ $ uv run mcp install main.py
 ![alt text](images/image.png)
 ![alt text](images/image-1.png)
 ![alt text](images/image-2.png)
+
+## Advanced MCP Server
+
+- before we go ahead , **fundamentally What is MCP?**:
+  - lets you build **servers** that _expose data_ and functionality to LLM applications in a secure, standardized way. Think of it like a web API, but specifically designed for LLM interactions.
+    - Expose data through **Resources** (think of these sort of like GET endpoints; they are used to load information into the LLM's context)
+    - Provide functionality through **Tools** (sort of like POST endpoints; they are used to execute code or otherwise produce a side effect)
+    - Define interaction patterns through **Prompts** (reusable templates for LLM interactions)
+    - And more!
+
+```bash
+uv add black
+# after creating new mcp server & tool
+$ uv run mcp install adv_main.py
+[04/16/25 10:44:02] INFO     Added server 'AI Sticky Notes' to Claude config
+                    INFO     Successfully installed AI Sticky Notes in Claude app
+```
+
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
+![alt text](images/image-5.png)
+![alt text](images/image-6.png)
+![alt text](images/image-7.png)
+![alt text](images/image-8.png)
+
+- from this above example , we can see how to make use of tool we create and do whatever we can like.
+- add a tool to connect to db and ask claude to create 100 fake users into db , instead of us manually copy paste ..etc.we can automate lot of stuff.
